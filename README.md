@@ -36,6 +36,10 @@ python3 -B main.py
 > [!NOTE]
 > The `-B` prevents `__pycache__` being created
 
+### Output
+
+`/test` will created after program finish
+
 ## License
 
 Licensed under [MIT](LICENSE).
