@@ -1,4 +1,4 @@
-# nitter-retweet
+# Nitter-retweet
 
 A tool for debug some twitter features in [ArisaMatsuda](https://github.com/LTurret/ArisaMatsuda)
 
