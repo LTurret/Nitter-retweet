@@ -1,7 +1,3 @@
-# from io import BytesIO
-from re import findall
-from re import search
-
 from aiohttp import ClientSession
 
 # from interactions import File
@@ -26,13 +22,6 @@ async def get_contents(api_callback: dict) -> dict:
         # Extract tweet content text
         if "full_text" in tweet_detail:
             full_text: str = tweet_detail["full_text"]
-            start: int = -1
-
-            if findall(r"https:\/\/t.co\/.+", full_text):
-                match_pop: str = findall(r"https:\/\/t.co\/.+", full_text)[-1]
-                start: int = search(match_pop, full_text).start()
-
-            full_text = full_text[:start]
 
         # Extract tweet medias
         if "extended_entities" in tweet_detail:
