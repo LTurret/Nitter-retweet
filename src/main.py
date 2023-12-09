@@ -21,7 +21,7 @@ async def main():
     url: str = "https://nitter.net/imasml_theater"
     script_dir: str = path.dirname(path.realpath(__file__))
 
-    assert "headers" not in f"{script_dir}{sep}config", "Please check is your header.json exist in config folder."
+    assert "headers" not in f"{script_dir}{sep}config", "Please check is your header.json exists in config folder."
 
     with open(f"{script_dir}{sep}config{sep}headers.json", "r") as headers:
         headers: dict = load(headers)
