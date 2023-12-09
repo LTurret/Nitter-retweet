@@ -30,7 +30,7 @@ async def main():
 
     async with ClientSession(headers=headers) as session:
         async with session.get(url) as response:
-            queue: list = html_parser(await response.text())
+            queue: list[str] = html_parser(await response.text())
             print("Fetch complete!")
 
     tokens: dict = {**(await get_tokens())}

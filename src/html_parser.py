@@ -3,20 +3,19 @@ from re import search
 from bs4 import BeautifulSoup
 
 
-def html_parser(html: str, selector: str | None = "twitter") -> list:
-    soup: BeautifulSoup = BeautifulSoup(html, "html.parser")
+def html_parser(html: str, selector: str = "twitter") -> list:
+    soup: BeautifulSoup | list[str] = BeautifulSoup(html, "html.parser")
     soup = soup.find_all("a", class_="tweet-link")
     soup = list(map(str, soup))
     soup = list(map(lambda string: url_slice(string, selector), soup))
     return soup
 
 
-def url_slice(raw_string: str, selector: str | None = "twitter") -> str:
+def url_slice(raw_string: str, selector: str = "twitter") -> str:
     domain_manifest: dict = {
         "twitter": "https://twitter.com",
         "x": "https://x.com",
-        "nitter": "https://nitter.net",
-        None: "",
+        "nitter": "https://nitter.net"
     }
     expression: str = r"href=\"(.+)\""
     api_slice: str = search(expression, raw_string).group(1)[:-2]
