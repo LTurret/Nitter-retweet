@@ -2,11 +2,17 @@
 
 A tool for debug some twitter features in [ArisaMatsuda](https://github.com/LTurret/ArisaMatsuda)
 
-## Related functions
+## Module
 
-- [fetch_tweet.py](https://github.com/LTurret/ArisaMatsuda/blob/main/cogs/src/fetch_tweet.py)
-- [get_contents.py](https://github.com/LTurret/ArisaMatsuda/blob/main/cogs/src/get_contents.py)
-- [get_tokens.py](https://github.com/LTurret/ArisaMatsuda/blob/main/cogs/src/get_tokens.py)
+> [!IMPORTANT]  
+> **The module this repo used is different from ArisaMatsudas' module  
+> ArisaMatsuda is currently moved to [newer fetching module](https://github.com/LTurret/Twitter-fetching-module)**
+
+Relation between ArisaMatsuda and fetching module
+
+- `fetch_tweet.py`
+- `get_contents.py`
+- `get_tokens.py`
 
 ## Build
 
@@ -34,11 +40,11 @@ python3 -B main.py
 ```
 
 > [!NOTE]
-> The `-B` prevents `__pycache__` being created
+> `-B` prevents `__pycache__` being created
 
 ### Output
 
-`/test` will created after program finish
+`/test` will generated after program finish
 
 ## License
 
