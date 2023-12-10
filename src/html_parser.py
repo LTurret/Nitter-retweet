@@ -12,11 +12,7 @@ def html_parser(html: str, selector: str = "twitter") -> list:
 
 
 def url_slice(raw_string: str, selector: str = "twitter") -> str:
-    domain_manifest: dict = {
-        "twitter": "https://twitter.com",
-        "x": "https://x.com",
-        "nitter": "https://nitter.net"
-    }
+    domain_manifest: dict = {"twitter": "https://twitter.com", "x": "https://x.com", "nitter": "https://nitter.net"}
     expression: str = r"href=\"(.+)\""
     api_slice: str = search(expression, raw_string).group(1)[:-2]
     text: str = f"{domain_manifest[selector]}{api_slice}"
